@@ -1,0 +1,140 @@
+<div class="container">
+
+  <!--Carousel
+  ==================================================-->
+
+  <div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+
+      <div class="active item">
+        <div class="container">
+          <div class="row">
+
+            <div class="span6">
+
+              <div class="carousel-caption">
+                <h1>Discuss Together</h1>
+                <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                  gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+              </div>
+
+            </div>
+
+            <!--<div class="span6"> <img src="img/slide/slide1.jpg"></div>-->
+            <div class="span6"> <%= image_tag "slide/slide1.jpg", :class => "img_preview" %></div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="item">
+
+        <div class="container">
+          <div class="row">
+
+            <div class="span6">
+
+              <div class="carousel-caption">
+                <h1>Discuss Together</h1>
+                <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                  gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+              </div>
+
+            </div>
+
+            <!--<div class="span6"> <img src="img/slide/slide2.jpg"></div>-->
+            <div class="span6"> <%= image_tag "slide/slide2.jpg", :class => "img_preview" %></div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left " href="#myCarousel" data-slide="prev"><i class="icon-chevron-left"></i></a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="icon-chevron-right"></i></a>
+    <!-- /.Carousel nav -->
+
+  </div>
+  <!-- /Carousel -->
+
+
+  <!-- Feature
+    ==============================================-->
+
+
+  <div class="row feature-box">
+    <div class="span12 cnt-title">
+      <h1>Come Together, Discuss Together, Succeed Together</h1>
+      <span>DailyTechDiscuss to you, for discussing together.</span>
+    </div>
+
+    <div class="span4">
+      <%= link_to "#{image_tag "icon3.png", :class => "img_preview"}".html_safe, root_path %>
+      <h2><%=link_to "Events", root_path%></h2>
+
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </p>
+      <%= link_to "Read More &rarr;".html_safe, root_path %>
+
+    </div>
+
+    <div class="span4">
+      <%= link_to "#{image_tag "icon2.png", :class => "img_preview"}".html_safe, root_path %>
+      <h2><%=link_to "Live Discussion", root_path%></h2>
+
+      <p>
+        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua.
+      </p>
+      <%= link_to "Read More &rarr;".html_safe, root_path %>
+
+    </div>
+
+    <div class="span4">
+      <%= link_to "#{image_tag "icon1.png", :class => "img_preview"}".html_safe, root_path %>
+      <h2><%=link_to "Blog", root_path%></h2>
+      <p>
+        Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+      </p>
+      <%= link_to "Read More &rarr;".html_safe, root_path %>
+
+    </div>
+  </div>
+
+
+  <!-- /.Feature -->
+
+  <div class="hr-divider"></div>
+
+  <!-- Row View -->
+
+
+  <div class="row">
+    <div class="span6"><%= image_tag "responsive.png", :class => "img_preview" %></div>
+
+    <div class="span6">
+
+      <%= image_tag "icon4.png", :class => "img_preview" %>
+
+      <h1>Fully Responsive</h1>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
+        quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+        ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      <a href="#">Read More &rarr;</a>
+    </div>
+  </div>
+
+
+</div>
+
+
+<!-- /.Row View -->
