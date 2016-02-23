@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   def index
   end
 
-  def hello
-    render text: "hello, World"
+  def abcd
+
   end
 end

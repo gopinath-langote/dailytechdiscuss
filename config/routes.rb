@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/new'
+
+  get 'users/new'
+
+  get 'users/new'
+  get 'signup'  => 'users#new'
   get 'home/index'
+  get 'home/abcd'
   root to: "home#index"
 
   resources :home
