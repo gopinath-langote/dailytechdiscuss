@@ -36,6 +36,11 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def admin?
+    @user = User.find_by(id:@current_user.id)
+    return @user.admin?
+  end
+
   # Forgets a persistent session.
   def forget(user)
     user.forget
