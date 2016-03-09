@@ -9,23 +9,24 @@ class UsersController < ApplicationController
         @type= params[:type]
         if(@type == "Admin" && params[:search])
           @query= params[:search]
-          @users = User.where(:admin => true).where("name like ?", "%#{@query}%")
+          @users = User.where(:admin => true).where("name like ?", "%#{@query}%").order("created_at DESC")
         end
         if(@type == "Non Admin" && params[:search])
           @query= params[:search]
-          @users = User.where(:admin => false).where("name like ?", "%#{@query}%")
+          @users = User.where(:admin => false).where("name like ?", "%#{@query}%").order("created_at DESC")
         end
         if(@type =="All" && params[:search])
           @query= params[:search]
-          @users = User.where("name like ?", "%#{@query}%")
+          @users = User.where("name like ?", "%#{@query}%").order("created_at DESC")
         end
       else
         if params[:search]
           @query= params[:search]
-          @users = User.where("name like ?", "%#{@query}%")
+          @users = User.where("name like ?", "%#{@query}%").order("created_at DESC")
           # @users = User.search(params[:search]).order("created_at DESC")
         else
-          @users = User.paginate(page: params[:page])
+          # @users = User.paginate(page: params[:page]).order("created_at DESC")
+          @users = User.all.order("created_at DESC")
         end
       end
     else
