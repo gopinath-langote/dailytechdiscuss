@@ -7,14 +7,17 @@ class UsersController < ApplicationController
     if current_user.admin
       if params[:type]
         @type= params[:type]
-        if(@type == "Admin")
-          @users = User.where(:admin => true)
+        if(@type == "Admin" && params[:search])
+          @query= params[:search]
+          @users = User.where(:admin => true).where("name like ?", "%#{@query}%")
         end
-        if(@type == "Non Admin")
-          @users = User.where(:admin => false)
+        if(@type == "Non Admin" && params[:search])
+          @query= params[:search]
+          @users = User.where(:admin => false).where("name like ?", "%#{@query}%")
         end
-        if(@type =="All")
-          @users = User.paginate(page: params[:page])
+        if(@type =="All" && params[:search])
+          @query= params[:search]
+          @users = User.where("name like ?", "%#{@query}%")
         end
       else
         if params[:search]
