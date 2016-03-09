@@ -28,7 +28,7 @@ Rails.application.configure do
       :enable_starttls_auto => true
   }
 
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  config.action_mailer.default_url_options = { :host => "dailytechdiscuss.herokuapp.com" }
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
